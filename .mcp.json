@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "al": {
+      "type": "stdio",
+      "command": "al",
+      "args": [
+        "launchmcpserver",
+        ".",
+        "--disableTelemetry",
+        "--transport",
+        "stdio"
+      ],
+      "env": {}
+    },
+    "al-mcp-server": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "al-mcp-server"
+      ],
+      "env": {}
+    }
+  }
+}

@@ -3,17 +3,36 @@
   "name": "ManageUsersAndPermissions",
   "publisher": "Christian Schumacher",
   "version": "2.0.0.0",
-  "brief": "",
-  "description": "",
+  "brief": "Simplified management of Business Central user accounts and permissions.",
+  "description": "Extends Business Central with tools for renaming permission sets, searching for permissions, creating exclusion-based permission set variants, and analyzing user access to specific objects.",
   "privacyStatement": "",
   "EULA": "",
   "help": "",
   "url": "",
   "logo": "",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "System Application",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f"
+    },
+    {
+      "name": "Base Application",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "437dbf0e-84ff-417a-965d-ed2bb9650972"
+    },
+    {
+      "name": "Business Foundation",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "f3552374-a1f2-4356-848e-196002525837"
+    }
+  ],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "22.0.0.0",
+  "application": "28.0.0.0",
   "idRanges": [
     {
       "from": 50000,

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__al-mcp-server__al_packages",
+      "mcp__al-mcp-server__al_search_objects",
+      "mcp__al-mcp-server__al_get_object_definition",
+      "mcp__al__al_compile",
+      "mcp__al__al_getdiagnostics"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "al",
+    "al-mcp-server"
+  ]
+}
