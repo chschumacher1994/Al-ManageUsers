@@ -1,7 +1,7 @@
 # Implementation Plan: ManageUsersAndPermissions
 
-## Status: IN PROGRESS
-Last updated: 2026-03-10
+## Status: COMPLETE
+Last updated: 2026-03-11
 
 ## Feature Summary
 Extension für Microsoft Dynamics 365 Business Central (BC 28, SaaS), die die Verwaltung von Benutzerkonten und Berechtigungssätzen vereinfacht. Neue Funktionen: Umbenennen von Berechtigungssätzen (Role ID-Migration), Suche welche Sätze eine bestimmte Berechtigung enthalten, Erstellen von Exclusion-Wrapper-Sätzen ohne das Original zu verändern, eine Übersichtsseite die zeigt welche Benutzer Zugriff auf ein Objekt haben und warum, sowie Berichte über Berechtigungsstrukturen.
@@ -81,7 +81,7 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 
 ---
 
-### Step 2: M2 – Berechtigungssuche (Codeunit + Page) — ⬜ TODO
+### Step 2: M2 – Berechtigungssuche (Codeunit + Page) — ✅ DONE
 **Files**:
 - `src/PermissionSearch/PermissionSearchMgt.Codeunit.al` (Codeunit 50005)
 - `src/PermissionSearch/PermissionSearch.Page.al` (Page 50013)
@@ -95,7 +95,7 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 
 ---
 
-### Step 3: M1 – Permission Set Rename (Codeunit + Wizard) — ⬜ TODO
+### Step 3: M1 – Permission Set Rename (Codeunit + Wizard) — ✅ DONE
 **Files**:
 - `src/PermissionSetManagement/PermSetRenameMgt.Codeunit.al` (Codeunit 50002)
 - `src/PermissionSetManagement/PermSetRenameWizard.Page.al` (Page 50010)
@@ -111,7 +111,7 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 
 ---
 
-### Step 4: M3 – Exclusion Wrapper (Codeunit + Wizard) — ⬜ TODO
+### Step 4: M3 – Exclusion Wrapper (Codeunit + Wizard) — ✅ DONE
 **Files**:
 - `src/PermissionSetManagement/PermSetExclusionMgt.Codeunit.al` (Codeunit 50003)
 - `src/PermissionSetManagement/PermSetExclusionSrcList.Page.al` (Page 50012)
@@ -127,7 +127,7 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 
 ---
 
-### Step 5: M4 – Permission Analysis Codeunit — ⬜ TODO
+### Step 5: M4 – Permission Analysis Codeunit — ✅ DONE
 **Files**:
 - `src/UserObjectAccess/PermissionAnalysisMgt.Codeunit.al` (Codeunit 50004)
 
@@ -140,7 +140,7 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 
 ---
 
-### Step 6: M4 – User/Object Access Overview UI — ⬜ TODO
+### Step 6: M4 – User/Object Access Overview UI — ✅ DONE
 **Files**:
 - `src/UserObjectAccess/UserObjAccessUserList.Page.al` (Page 50015)
 - `src/UserObjectAccess/UserObjAccessPermSetList.Page.al` (Page 50016)
@@ -155,7 +155,7 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 
 ---
 
-### Step 7: Extensions – Aktionen auf Standard-Pages — ⬜ TODO
+### Step 7: Extensions – Aktionen auf Standard-Pages — ✅ DONE
 **Files**:
 - `src/Extensions/PermissionSets.PageExt.al` (PageExt 50020)
 
@@ -167,7 +167,7 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 
 ---
 
-### Step 8: Reports — ⬜ TODO
+### Step 8: Reports — ✅ DONE
 **Files**:
 - `src/Reports/UserPermission.Report.al` (Report 50030)
 - `src/Reports/PermissionSetUsage.Report.al` (Report 50031)
@@ -179,7 +179,7 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 
 ---
 
-### Step 9: Berechtigungssätze — ⬜ TODO
+### Step 9: Berechtigungssätze — ✅ DONE
 **Files**:
 - `src/Permissions/MUPAdmin.PermissionSet.al` (PermissionSet 50040)
 - `src/Permissions/MUPView.PermissionSet.al` (PermissionSet 50041)
@@ -191,9 +191,9 @@ BC Version: **28.0.46665** | Zielumgebung: **Cloud Sandbox (SaaS)**
 ---
 
 ## Open Questions
-- **Page 9857 Einbettung**: Lässt sich der Permission Set Tree korrekt befüllen, wenn er aus Page 50016 heraus via SubPageLink eingebettet wird? Muss nach Step 6 verifiziert werden.
+- **Page 9857 Einbettung**: Lässt sich der Permission Set Tree korrekt befüllen, wenn er aus Page 50016 heraus via SubPageLink eingebettet wird? Muss in Live-Umgebung verifiziert werden.
 - **Security Groups**: Sollen Berechtigungssätze, die über Security Group-Mitgliedschaft zugewiesen sind, in M4 (Step 5/6) auch angezeigt werden? Aktuell: nur direkte `Access Control`-Zuweisungen. Security Groups wären Phase 2.
-- **HelloWorld.al**: Physisch löschen (erfordert manuellen Schritt oder Bash-Befehl) oder als leere Kommentardatei belassen?
+- ~~**HelloWorld.al**: Physisch löschen~~ → Erledigt, Datei existiert nicht mehr.
 
 ## Decisions Log
 | # | Entscheidung | Begründung | Datum |
