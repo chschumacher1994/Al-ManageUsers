@@ -4,6 +4,9 @@
       "path": "ManageUsersAndPermissions"
     },
     {
+      "path": "ManageUsersAndPermissions.Test"
+    },
+    {
       "path": ".AL-Go"
     }
   ],

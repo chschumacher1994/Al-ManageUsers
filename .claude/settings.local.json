@@ -5,7 +5,17 @@
       "mcp__al-mcp-server__al_search_objects",
       "mcp__al-mcp-server__al_get_object_definition",
       "mcp__al__al_compile",
-      "mcp__al__al_getdiagnostics"
+      "mcp__al__al_getdiagnostics",
+      "mcp__al__al_build",
+      "mcp__al-mcp-server__al_search_object_members",
+      "mcp__al__al_downloadsymbols",
+      "Read",
+      "Edit",
+      "MultiEdit",
+      "Write",
+      "Bash(git *)",
+      "mcp__al-mcp-server__*",
+      "mcp__al__*"
     ]
   },
   "enabledMcpjsonServers": [

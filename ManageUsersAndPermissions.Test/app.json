@@ -1,0 +1,74 @@
+{
+  "id": "b3d7a1c2-e5f4-4a8b-9c0d-1e2f3a4b5c6d",
+  "name": "ManageUsersAndPermissions Tests",
+  "publisher": "Christian Schumacher",
+  "version": "2.0.0.0",
+  "brief": "Tests for the ManageUsersAndPermissions extension.",
+  "description": "Automated tests for permission search, permission set rename, exclusion wrapper, and permission analysis modules.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "name": "ManageUsersAndPermissions",
+      "publisher": "Christian Schumacher",
+      "version": "2.0.0.0",
+      "id": "49c6eb3a-06df-44a8-a30c-eb21d73cb155"
+    },
+    {
+      "name": "System Application",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f"
+    },
+    {
+      "name": "Base Application",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "437dbf0e-84ff-417a-965d-ed2bb9650972"
+    },
+    {
+      "name": "Business Foundation",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "f3552374-a1f2-4356-848e-196002525837"
+    },
+    {
+      "name": "Any",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "e7320ebb-08b3-4406-b1ec-b4927d3e280b"
+    },
+    {
+      "name": "Assert",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14"
+    },
+    {
+      "name": "Library - Lower Permissions",
+      "publisher": "Microsoft",
+      "version": "28.0.0.0",
+      "id": "76f52145-a2e8-4b53-afe9-dbab00fb5e56"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "28.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50199
+    }
+  ],
+  "features": [
+    "NoImplicitWith"
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  }
+}

@@ -4,6 +4,39 @@
 
 ---
 
+### 2026-03-11 — Session 6
+
+**Completed:**
+- Test-Projekt `ManageUsersAndPermissions.Test/` neu erstellt (AL-Go-Struktur)
+  - `app.json` — Dependencies auf Main-App, System/Base/Business Foundation, Assert, Any, Library - Lower Permissions
+  - `.vscode/launch.json` — Sandbox-Connection
+  - `src/Helpers/PermTestHelper.Codeunit.al` (Cu 50190) — Shared test data helper
+  - `src/PermissionSearch/PermSearchMgtTests.Codeunit.al` (Cu 50100) — 6 Tests
+  - `src/PermSetRename/PermSetRenameMgtTests.Codeunit.al` (Cu 50110) — 6 Tests
+  - `src/PermSetExclusion/PermSetExclusionMgtTests.Codeunit.al` (Cu 50120) — 7 Tests
+  - `src/PermissionAnalysis/PermAnalysisMgtTests.Codeunit.al` (Cu 50130) — 7 Tests
+- `al.code-workspace` — Test-Projekt als Workspace-Folder hinzugefügt
+- `.AL-Go/settings.json` — `testFolders` konfiguriert
+
+**Key decisions:**
+- 26 Tests über 4 Module: Happy Path, Setup Missing, Invalid Input/Boundaries, Permission-relevant
+- GIVEN/WHEN/THEN Pattern durchgängig
+- Eigener PermTestHelper (Cu 50190) für Testdaten-Erstellung und Cleanup statt Library - Permissions (zu eingeschränkt für Tenant-Sätze)
+- TestPermissions('Disabled') auf allen Test-Codeunits (Tests manipulieren direkt System-Tabellen)
+
+**Current state:**
+- Compiles (App): ✅ (0 Fehler, 0 Warnungen)
+- Compiles (Test): ⚠️ Test-Framework-Symbole (Assert, Any) müssen erst heruntergeladen werden
+- **Alle Steps (0–9) + Tests abgeschlossen**
+- Plan-Status: COMPLETE
+
+**Open issues:**
+- Test-Symbole herunterladen: `al_downloadsymbols` für Test-Projekt vor Testausführung
+- Page 9857 (Permission Set Tree) Einbettbarkeit: noch nicht in Live-Umgebung getestet
+- Security Group-Zuweisungen in M4: Phase 2
+
+---
+
 ### 2026-03-11 — Session 5
 
 **Completed:**
